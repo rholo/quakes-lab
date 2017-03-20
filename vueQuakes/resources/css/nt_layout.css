@@ -1,0 +1,47 @@
+body{
+    font-family: 'Segoe UI',Helvetica,'lucida grande',tahoma,sans-serif;
+}
+.nt_content {
+    /*max-width: 1100px;*/
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+/*section <section>*/
+section.nt_section {
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+header.nt_section-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+}
+footer.nt_section-footer {
+    display: block;
+    clear: both;
+    min-height: 30px;
+    margin: 5px 0 0 !important;
+}
+/*custom icons, font-awesome by default*/
+.nt_icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 5px!important;
+    border-radius: 32px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fa.fa-html5{
+    color:#f16529!important;
+}
+.fa.fa-css3{
+    color:#409ad6!important;
+}
+.fa.fa-folder{
+    color:#b17d6a!important;
+}

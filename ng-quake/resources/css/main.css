@@ -1,0 +1,152 @@
+/******************==[General Settings]==********************/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+body{font-family: 'Open Sans', sans-serif;}
+p{font-size: 1.2rem;}
+/*******************==[header]==*******************/
+header
+{background: #00a79d;padding: 10px 10px 20px;}
+
+header h1
+{color: #fff;font-weight: 200;}
+
+[search]
+{padding: 0;background: #EDEDED;}
+
+[search] > input
+{border: 0px;width: 100%; border-radius: 2px; padding: 15px; outline: none !important;}
+
+[search] > input
+{background-image: url('../img/search.svg');
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 24px;
+background-size: 24px;}
+
+.geo-search
+{position: fixed;top: 0;bottom: 0;right: 0;left: 0;background-color:#00a79d;}
+
+.location
+{width:150px;height: 120px;position: absolute;top: 50%;left: 50%;margin-left: -75px;margin-top: -60px;text-align: center;}
+
+.location span
+{color: #fff;}
+.location i
+{margin: 0 auto;}
+
+/*******************==[Events List]==*******************/
+.results
+{text-align: center;
+font-size: 1.3rem;
+font-weight: 200;
+color: #fff;
+position: absolute;
+top: 44px;
+left: 10px;
+}
+.city
+{text-align: center;
+font-size: 1.3rem;
+font-weight: 200;
+color: #fff;
+position: absolute;
+top: 44px;
+right: 10px;
+}
+.events > li{
+	overflow: hidden;border-bottom: 1px solid #e6e7e8;padding:5px 10px;position: relative;
+}
+.default-background-list{
+	background-color: #f9f9f9;
+}
+.red-background-list{
+	background-color: rgba(255, 0, 0, 0.06);
+}
+.yellow-background-list{
+	background-color:rgba(255, 232, 0, 0.06);
+}
+
+.events > li a, .events li a:hover
+{text-decoration: none;outline: none;display: block;}
+
+[color]
+{width: 5px;position: absolute;left: 0px;top: 0;bottom:0;}
+
+.red-background {background:#EF6D6D;}
+.yellow-background {background:#EFD36D;}
+.default-background {background-color: #00a79d;}
+
+.events > li .mag
+{font-size: 2.6rem;font-weight: 300;color: #00a79d;line-height: .9;float: left;display: block;}
+
+.red-mag{color: #EF6D6D!important;}
+.yellow-mag{color:#C5C527!important;}
+
+.events li .place
+{font-size: 1.6rem;font-weight: 300;color:#a97c50;vertical-align:text-bottom;margin-left:6px;text-overflow: ellipsis; overflow: hidden; white-space: nowrap;display: block;padding: 0 20px 0 10px;}
+
+.quake-info{margin-top: 6px;}
+.quake-info li {
+	border:0;
+	display: inline-block;
+}
+.quake-info li > span{
+	color: #6B6B6B;
+	vertical-align: middle;
+}
+
+.maps
+{overflow: hidden;width: 100%;}
+.maps img
+{width: 100%;
+height: auto;
+overflow: hidden;}
+/*******************==[Details Section]==*******************/
+.detail-section header {
+	padding: 0 4px;
+    background: transparent;
+    position: absolute;
+}
+.detail-section header h1,
+.detail-section header h3{
+	color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.detail-section header h1 {
+	font-weight: bolder;
+	font-size: 2.1rem;
+}
+.detail-section header h3{
+    font-size: 1.7rem;
+}
+.detail-section h5
+{font-size: 1.5rem;padding:5px;}
+
+.timestamp
+{padding: 5px;}
+.cities
+{margin: 0 0 10px 0;}
+
+.cities li
+{padding: 5px;border-top: 1px #eee dotted;}
+/*******************==[Other Stuff]==*******************/
+
+[preloader]
+{position: fixed;z-index: 99999;top: 0;bottom: 0;right: 0;left: 0;overflow: hidden;
+background-color:#00a79d;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 24px;
+}
+[size="16"]{
+	background-size: 16px;width: 16px;height: 16px;
+}
+[size="24"]{
+	background-size: 24px;width: 24px;height: 24px;
+}
+[size="32"]{
+	background-size: 32px;width: 32px;height: 32px;
+}
+[size="64"]{
+	background-size: 64px;width: 64px;height: 64px;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<!-- Internet Explorer compatibility mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Earthquakes</title>
+<!-- for Google -->
+<meta name="description" content="Información de sismos basados en la escala de Richter" />
+<meta name="author" content="Rodrigo Ahumada" />
+<meta name="copyright" content="Rodrigo Ahumada" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+<!--Google me at Github-->
+<link rel="stylesheet" media="all" href="resources/css/reset.css"/>
+<link rel="stylesheet" media="all" href="resources/css/main.css"/>
+<link rel="stylesheet" media="all" href="resources/css/base64.css"/>
+<link rel="stylesheet" media="all" href="resources/css/animate.css"/>
+<!--Jquery-->
+<script src="resources/js/jquery/jquery.min.js"></script>
+<!--AngularJS-->
+<script src="resources/js/angular/angular.min.js"></script>
+<script src="resources/js/angular/angular-route.js"></script>
+<script src="resources/js/angular/angular-animate.min.js"></script>
+</head>
+<body ng-app="earthquakeApp">
+    <header>
+        <h1>Equakes</h1>
+    </header>
+    <main>
+        <section ng-view>
+        </section>
+    </main>
+    <footer></footer>
+<div preloader ng-show="preloaderVisible"></div>
+<!-- App -->
+<script src="resources/js/app.js"></script> 
+<script src="resources/js/services.js"></script> 
+<script src="resources/js/controllers.js"></script> 
+<script src="resources/js/directives.js"></script>
+<script src="resources/js/preloader.js"></script>
+</body>
+</html>

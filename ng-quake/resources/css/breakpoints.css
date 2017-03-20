@@ -1,0 +1,35 @@
+/*******************==[Breackpoints]==*******************/
+
+@media screen and (max-width: 40em) {
+
+[ui-grid] 
+{display: block;width: 100%;border: 0!important;}
+
+.nav{left: 0;right: 0;top: 49px;}
+
+}
+/*Smart Gama media 320*/
+@media only screen and (max-width:479px) {
+    
+}
+/*Smart Gama Alta 480*/
+@media only screen and (min-width:480px) and (max-width:599px) {
+   
+}
+/*Tablet Baja Res 600*/
+@media only screen and (min-width:600px) and (max-width:766px) {
+   
+}
+/*Tablet alta res 800*/
+@media only screen and (min-width:767px) and (max-width:959px) {
+    
+}
+/*Tablet Alta Res 1024*/
+@media only screen and (min-width:960px) and (max-width:1139px) {
+   
+}
+/*Retina media query*/
+@media only screen and (-webkit-min-device-pixel-ratio:2),
+	only screen and (min-device-pixel-ratio:2) {
+	
+}

@@ -1,0 +1,21 @@
+<section class="detail-section" details>
+    <header>
+        <h1>{{quakeDetail.properties.mag}}° Richter</b></h1>
+        <!-- <h3>{{cities[0].name}}, <b>{{cities[0].population | number}}</b> Habitantes</h3> -->
+    </header>
+    <div>
+        <div class="maps">
+            <img src="http://maps.googleapis.com/maps/api/staticmap?visible={{quakeDetail.geometry.coordinates[1]}},{{quakeDetail.geometry.coordinates[0]}}&size=480x250&maptype=roadmap\&zoom=7&markers=color:red%7clabel:E%7c{{quakeDetail.geometry.coordinates[1]}},{{quakeDetail.geometry.coordinates[0]}}&path=color:0xff0000ff|weight:2|{{quakeDetail.geometry.coordinates[1]}},{{quakeDetail.geometry.coordinates[0]}}&scale=3&sensor=true">
+            <!-- <a href="https://www.google.com/maps/place/Albany,+NY/"><img src="https://maps.googleapis.com/maps/api/staticmap?visible={{quakeDetail.geometry.coordinates[1]}},{{quakeDetail.geometry.coordinates[0]}}&zoom=9&scale=2&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7CAlbany,+NY" alt="Google Map of {{}}"></a> -->
+        </div>
+        <div class="detail-title">
+        </div>
+    </div>
+    <div class="timestamp">
+        <p>Fecha/Hora: {{quakeDetail.properties.time | date:"dd/MM/yyyy 'a las' h:mma"}}</p>
+        <span ico="tsunami" ng-if="quakeDetail.properties.alert == null">Sin Alertas Declaradas</span>
+        <span ico="tsunami" ng-if="quakeDetail.properties.alert != null">Declarada Alerta, Situación: {{quakeDetail.properties.alert}}</span>
+    </div>
+
+
+</section>

@@ -1,0 +1,32 @@
+.wrap{
+    max-width: 960px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding:0 25px;
+}
+main{
+    background:#f7f7f7;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    min-height: 200px;
+}
+section{
+    margin-top: 20px;
+}
+
+/**
+* Mobile
+**/
+@media screen and (max-width: 40em) {
+
+}
+/**
+* for retina display
+**/
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+}
+@media screen and (max-width: 340px) {
+
+}

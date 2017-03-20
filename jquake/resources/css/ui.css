@@ -1,0 +1,58 @@
+/*UI CSS*/
+body{
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+	text-rendering: optimizeLegibility;
+}
+.left{float:left;}
+.right{float: right;}
+[ui=input-text], [ui=select], [ui=textarea] {
+    border: 1px solid #ccc!important;
+    padding: 12px;
+    font-size: 1.6rem;
+	font-family: 'StagSansBook';
+    width: 100%;
+    background-color: #F7F7F7;
+    color: #5a5a5a;
+    border-radius: 5px;
+}
+[ui=button] {
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    padding:12px;
+    border:none;
+    outline: 0;
+    width: 192px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+}
+[ui="button"] > i{
+    vertical-align: baseline;;
+}
+[ui="button"] > span{
+    vertical-align: top;
+	font-family: 'StagSansSemibold';
+}
+[ui="button"]:hover{
+    text-decoration: none;
+}
+
+[ui="button"] + [ui="button"] {
+    margin-left: 20px;
+}
+[color="blue"] {
+    background-color:#094fa4;
+}
+[color="grey"]{
+    background-color: #808080;
+}
+label.error{
+	display: block;
+    font-size: 1.2em!important;
+    background: #FFC8C8;
+    color: #A72A2A!important;
+    margin-top: 4px;
+    border-radius: 2px;
+    padding: 5px 10px;
+}

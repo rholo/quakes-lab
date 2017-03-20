@@ -1,0 +1,62 @@
+
+/*Custom layout*/
+.nt_header > h1{
+	text-align: center;
+    color: brown;
+    font-weight: bold;
+    margin-top: 14px;
+}
+.events > li{
+	overflow: hidden;
+    border-bottom: 1px solid #e6e7e8;
+    padding:5px 10px;
+    position: relative;
+    background-color: whitesmoke;
+}
+.events > li + li{
+    margin-top: 1px;
+}
+li.red{
+    background-color: rgba(255, 0, 0, 0.06);
+}
+li.yellow{
+    background-color: rgba(255, 232, 0, 0.06);
+}
+.events > li a, .events li a:hover{
+    text-decoration: none;
+    outline: none;
+    display: block;
+}
+.events > li .mag{
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: #00a79d;
+    line-height: .9;
+    float: left;
+    display: block;
+}
+.events li .place{
+    font-size: 1.6rem;
+    font-weight: 300;
+    color:#a97c50;
+    vertical-align:text-bottom;
+    margin-left:6px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    padding: 0 20px 0 10px;
+}
+.block-color{
+    width: 5px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+}
+.block-color.red{
+    background-color:#EF6D6D;
+}
+.block-color.yellow{
+    background-color:#EFD36D;
+}

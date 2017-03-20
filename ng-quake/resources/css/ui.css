@@ -1,0 +1,287 @@
+/*******************==[Initial Config]==*******************/
+
+
+/*******************==[Preloader]==*******************/
+
+
+
+/*******************==[Responsive Nav]==*******************/
+
+[ui="nav-botton"]
+{width: 40px;border-radius: 3px;padding: 8px;outline: none;float: right;margin-top: 10px;background: none;}
+
+[ui="nav-botton"] span
+{background: #2980b9;display: block;height:3px; }
+
+[ui="nav-botton"] span + span
+{margin-top:3px;}
+
+/*******************==[Modal]==*******************/
+
+[ui="modal"]
+{left:50%;margin:-150px 0 0 -40%;position:absolute;top:50%;width:80%;opacity:0;display: none;}
+
+/*efecto*/
+[ui="modal"] {transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; }
+
+[ui="modal"] .overlay
+{background-color:#000;background:rgba(0,0,0,0.7);height:100%;left:0;right:0;top:0;position:fixed;width:100%;z-index:9998;}
+
+[ui="modal"] .modal-footer, [ui="modal"] .modal-header, [ui="modal"] .modal-content
+{padding: 10px;}
+
+[ui="modal"] .modal-footer
+{border-top:1px solid #e7e7e7}
+[ui="modal"] .modal-header
+{border-bottom:1px solid #e7e7e7}
+
+[ui="modal"] .modal-content
+{background: #fff;}
+
+[ui="modal"] .modal-wrap
+{position:relative;z-index:9999;border-radius:5px;background:#f7f7f7;}
+
+[ui="modal"] .modal-footer:before,
+[ui="modal"] .modal-footer:after
+{content:"";display:table;}
+
+[ui="modal"] modal-footer:after
+{clear:both;}
+
+/*******************==[progress bar]==*******************/
+
+[ui="progress-bar"]
+{display: block;width: 100%;background: #ddd;height: 35px;position: relative;overflow: hidden;}
+
+[ui="progress-bar"] > span
+{color: #fff;font-size: 1.9rem; position: absolute;background: #2980b9;left: 0;height: 35px;line-height: 35px;font-style: normal;text-align: left;padding: 0 8px;}
+
+/*******************==[inputs]==*******************/
+[ui="input-text"]
+{border: 1px solid #ccc!important;padding: 6px;font-size: 1.2rem;font-family: inherit;width: 100%;}
+
+[ui="input-text"]
+{margin:10px 0;}
+
+input[type="file"]
+{border:0!important;outline:none;}
+
+.input-calendar, .input-search
+{background-position: right;background-repeat: no-repeat;background-color: #fff!important;}
+
+textarea
+{min-height: 140px;}
+
+[ui="select"]{padding: 2px!important;-webkit-appearance:button;background-position: bottom right;background-repeat: no-repeat;background-size: 16px;padding-right: 16px!important;}
+
+.invalid ~ small { display: block; opacity: 1.0; padding: 3px 5px; background: red; color: white; font-weight: 700; font-size: 0.87em; margin: 0 2px; }
+/*******************==[Table]==*******************/
+table > tbody > tr:nth-child(odd)
+{background: #F6F7F7;}
+
+tbody
+{border:1px solid #ccc}
+
+tbody td
+{-webkit-box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 1);
+-moz-box-shadow:    0px -1px 0px 0px rgba(255, 255, 255, 1);
+box-shadow:         0px -1px 0px 0px rgba(255, 255, 255, 1);}
+
+tbody > tr, tfoot > tr
+{font-style: italic;font-size: 1.2rem;}
+
+th
+{font-size: 1.3rem;border-bottom: 1px solid #ccc;}
+
+th, td
+{text-align: left;}
+
+/*******************==[Accordion]==*******************/
+.collapse-content
+{display: none;padding: 10px 0;}
+.collapse-header
+{margin-bottom: 2px;}
+.collapse-header
+{display: block;padding: 10px;background: #eee;width: 100%;text-decoration: none;color: inherit;font-size: 1.4rem;font-weight: 600;0}
+/*******************==[Buttons]==*******************/
+
+[ui="button"]
+{padding: 11px 16px;font-weight: 700;font-size: 1.3rem;display: inline-block;color: #fff;background: #5C6067;margin:11px 0;width: 100%}
+
+/*border-radius*/
+[ui="button"], textarea, [ui="input-text"]
+{-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+
+[ui="button"]
+{text-shadow: 1px 1px 0 rgba(0,0,0,0.7);background-color: #2980b9;}
+
+/*******************==[Paginator]==*******************/
+
+[ui="paginador"] ul
+{display: inline-block;border-radius:5px;overflow: hidden;background:#fff}
+
+[ui="paginador"] ul li
+{float: left;background: #E6E6E6;}
+
+[ui="paginador"] ul li + li 
+{margin-left: 1px;}
+
+[ui="paginador"] ul li a 
+{text-decoration: none;padding:3px 10px;display: block;color:#5C6067;font-size: 1.2rem;}
+
+[ui="paginador"] ul li a.actived
+{background-color: #2980b9;color: #fff;}
+
+[ui="paginador"] ul li a:hover, [ui="paginador"] ul li a.selected
+{background: #2980b9;color:#fff;}
+
+[ui="paginador"] ul li a.disabled
+{color:#ccc;}
+
+[ui="paginador"] ul li a.disabled:hover
+{background: #f1f1f1;cursor: not-allowed;color:#ccc;}
+
+
+/*******************==[Progress-Tracker]==*******************/
+
+[ui="progress-tracker"] ol
+{overflow: hidden;}
+
+[ui="progress-tracker"] ol li span
+{display: block;font-weight: 700;padding:0 0 0 24px;background: #2980b9;color: #fff;}
+
+[ui="progress-tracker"] ol li.done ~ li span
+{background: #eee;font-weight: normal;color: #2980b9}
+
+
+[ui="progress-tracker"] ol li
+{display: inline-block;position: relative;background: #eee;height: 30px;line-height: 30px;}
+
+[ui="progress-tracker"] ol li > span:after,
+[ui="progress-tracker"] ol li > span:before
+{content:"";display: block;position: absolute;top: 0;left: 0;border: solid transparent;border-left-color: #2980b9;border-width: 15px;}
+
+[ui="progress-tracker"] ol li > span:after
+{top: -5px;z-index: 1;border-left-color: #fff;border-width: 20px;}
+
+[ui="progress-tracker"] ol li > span:before
+{z-index: 2;}
+
+[ui="progress-tracker"] ol li.done ~ li > span:before
+{border-left-color: #eee;}
+
+[ui="progress-tracker"] ol li.done + li > span:before
+{border-left-color:  #2980b9}
+[ui="progress-tracker"] ol li:first-child > span:after,
+[ui="progress-tracker"] ol li:first-child > span:before
+{display: none;}
+
+
+[steps="1"] ol li   {width:100%;}
+[steps="2"] ol li   {width:50%;}
+[steps="3"] ol li   {width:33.333%;}
+[steps="4"] ol li   {width:25%;}
+[steps="5"] ol li   {width:20%;}
+[steps="6"] ol li   {width:16.66%;}
+[steps="7"] ol li   {width:14.28%;}
+[steps="8"] ol li   {width:12.5%;}
+[steps="9"] ol li   {width:11.11%;}
+[steps="10"] ol li  {width:10%;}
+
+/*******************==[Breadcrumbs]==*******************/
+
+.breadcrumbs
+{float: left;}
+
+.breadcrumbs ol li
+{display: inline-block;font-size: 1.2rem;font-style: italic;color: #5C6067;margin-right: 10px;}
+
+.breadcrumbs ol li + li
+{background-repeat: no-repeat;background-position: left;padding-left: 20px;}
+
+.breadcrumbs ol li a:hover, .breadcrumbs ol li:last-child
+{color: #00437C;}
+
+.breadcrumbs ol li:last-child
+{text-decoration: underline;}
+
+/*******************==[Grid]==*******************/
+.content-grid
+{width: 100%;}
+
+.content-grid:before, .content-grid:after
+{display: table;content:"";}
+
+.content-grid:after
+{clear: both;}
+
+.row{margin:10px 0;display:table;width: 100%;}
+.row:before, 
+.row:after{content:"";display:table;}
+
+.row:after
+{clear:both;}
+
+[ui-grid]
+{display:table-cell;position:relative;padding: 10px;}
+
+[ui-grid]:first-child
+{padding-left: 0!important;}
+
+[ui-grid]:last-child{padding-left: 0!important;}
+
+[ui-grid] + [ui-grid]
+{border-left: 1px solid #E6E6E6;}
+
+[ui-grid]{min-height:50px;}
+
+[ui-grid="1"]{width:8.333%;}
+[ui-grid="2"]{width:16.667%;}
+[ui-grid="3"]{width:25.0%;}
+[ui-grid="4"]{width:33.333%;}
+[ui-grid="5"]{width:41.667%;}
+[ui-grid="6"]{width:50%;}
+[ui-grid="7"]{width:58.333%;}
+[ui-grid="8"]{width:66.667%;}
+[ui-grid="9"]{width:75.0%;}
+[ui-grid="10"]{width:83.333%;}
+[ui-grid="11"]{width:91.667%;}
+[ui-grid="12"]{width:100%;}
+
+
+/*******************==[base64]==*******************/
+
+[ui="select"]
+{background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAAEEfUpiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAThJREFUeNpiYMAHdBXj/zMhc0A0EzIHBAACiIEKZgAEEEEjWHBJwNgsuCRQFOCzEyCAyEdAU8/DvYVD0gCrAmRJbL54D6QEkMWY8EkiBy1WSbAVhMIAIIAoCYb5GJ4gIfxgoZDIQqZGBqzBSIpGggbgC1m8BhCrEcMAUjVSDQAE0MAhWAolJyGBwuk9Rm4hRzNJBmDTTLQBuDQTZQA+zQQNIKQZrwFAzQaENOMrFkGazxMTPkyUaMYwgFTN6MUuyZqRi+UAcjSDDQBqTgDS6wcsVwIE2EAVBfOJLtWpaCkoV/QDcQKsTqKLA6AW78dVNbEMlMU0cwCxFlPdAaRaTDUHkGsxxQ6AFl37KW1MsAyUxSQ7gNoWk9K8pInFxDRPaWoxvuYtXSzG1jwGldHz6V0xsQyUxYMGAACycFlPBKdHjAAAAABJRU5ErkJggg==');}
+
+.input-calendar
+{background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAIAAAFFwXvNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUFJREFUeNpiPHPmDAMMMAExGxsbhMMCxL9+/TI2NoZygODs2bNAEiCAGNH1AAFEGROcBdUD0QAEAAGEogcZsCDrhwOgPiZkK7HowJQDCCDsdjBhtZYJzVqot4Em/EcFQBF0EyDWMuH0DqaTsasFCCCcYYLPxXBgYGCAzEULQITZEAlgTMJjFpmLxS9AIWSlkMBB9hMTAymACY8rMQVxRi5WABBAlIUgzVSjRQ2mv1FUMzMzI4c3WtijxyVaRMLjEh5cTGgxh2YYmggTZsLGJOkfgiTEPNYkhZaESEtVtHQ3QICRlmJp6JChYLQxGJCtAEtYQ1S/evXq58+fQAY7O7uYmBimTqCCv3//QvImRAFaumHBZSdW40hSwEIwNRMDsAYLC5F6gDbhYpPsakyduNhkGj3UXI0/RRMDWChMGwOT0QF7ZansjOagNAAAAABJRU5ErkJggg==');}
+
+.input-search
+{background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAIAAAFFwXvNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdFJREFUeNpi3Lx5MwMMMEEod3d3BAdFZufOnUASIIAY0fVYWlr6+PhAOcLCwhAZFiDesmULhAMQQCh6sJgMBBAj0CWAonBDUCTQRIEAIICw28GE1VoWNGufPHly4cIFhNotYCAjI4NQa2BgAOED1UJFgUJ8fHzILgGJAg0iyg0AAYQzTAi4GBnIysrq6+sDGcePH3/79i0+G4EeZWFhgXgMGEnIwc3EQApAcQkkVD59+vTnzx+IkUCXoIcIBNjZ2SHH2+PHj/GZfejQIYIuAQjASxmlAAyDMBTGDuH9z+NBvIM/exCQYgtdGczvNNUkeqbg2ZQfNKliMVA6Itx9w412QLHQzNomdO6mI2hMqNB1bgI6BoNSitdojKwFVint607gVgP8oGdj9q82nw6IoGjSFvieoZlJmPbuCPrKnflq/JuTR4CRlmJp6JDBYjQLMYpYWVlNTEzQEiY8eWKWt8QaDS89geDq1av379+HWKaoqKimpiYDBmgFK7EBAjEXmCyBKQ5iLoR769YtSC0KKTsHWTQCsyUkBIB5EBgI8NAHhgakVYC1eiMQ1vCKExICQOO0wYCiaEQ2FFhoAWMJfxFArNHwspdsQ3EaTUzZM3wzOgCl6NRX4Cu7xgAAAABJRU5ErkJggg==');}
+
+
+/************************************************************************************************************************
+Semantic CSS for UI.CSS
+autor 	: Rodrigo Ahumada, Front-end Developer
+site 	: http://rholo.cl  @elRholo
+version : 0.1.5
+use with responsive/bility
+
+Semantic order CSS:
+Positioning
+Display & Box Model
+Background and typography styles
+Transitions
+Other
+
+CSS Colors
+
+Dark Night  :#2b325a  shadow #474e7a
+Dark Grey   :#2a2a2a  shadow #525252
+light Grey  :#e7e7e7  shadow #f4f4f4
+grey        :#c9c9c9  shadow #dadada
+Red         :#e52727  shadow #f74343
+Sun         :#f2cf2d  shadow #fedf4e
+Nature      :#3fd150  shadow #56e867
+*************************************************************************************************************************/

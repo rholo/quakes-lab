@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Internet Explorer compatibility mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> -->
+        <title>VueQuakes</title>
+        <link rel="stylesheet" media="all" href="resources/css/reset.css">
+        <link rel="stylesheet" media="all" href="resources/css/nt_layout.css">
+        <link rel="stylesheet" media="all" href="resources/css/custom-layout.css">
+        <script src="//use.fontawesome.com/c3d275c793.js"></script>
+        <script src="resources/js/vue.js"></script>
+        <script src="resources/js/vue-filter.js"></script>
+        <!-- <script src="//unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script> -->
+        <script src="//cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+        <!-- <script src="resources/js/jquery.js"></script> -->
+    </head>
+    <body>
+        <header class="nt_header" id="header">
+            <title-quake :titulo="mensaje"></title-quake>
+        </header>
+        <main class="nt_content">
+            <article id="earthquakesList">
+                <ul  class="events">
+                    <li v-for="event in events" v-bind:class="[{red: event.properties.mag >= 5},{yellow: event.properties.mag <= 4.9}]">
+                        <a href="javascript:;" v-on:click="getDetails(event.id)">
+                            <div class="block-color" v-bind:class="[{red: event.properties.mag >= 5},{yellow: event.properties.mag <= 4.9}]"></div>
+                            <span class="mag"><i class="fa fa-place"></i>{{event.properties.mag}}</span>
+                            <span class="place"><i class="fa fa-bullseye"></i>{{event.properties.place}}</span>
+                            <span class=""><i class="fa fa-clock"></i>Fecha: {{event.properties.time | formatDate}}, Hora: {{event.properties.time | formatTime}}</span>
+                            <span class="" v-if="event.properties.tsunami != 0"><strong>Declarada Alerta de Tsunami</strong></span>
+                        </a>
+                    </li>
+                    <!-- <quake-list v-for="event in events" v-bind:events="event"></quake-list> -->
+                </ul>
+                <!-- <div :is="detail"></div> -->
+                <quake-detail></quake-detail>
+            </article>
+        </main>
+        <footer></footer>
+        <script src="resources/app/app-vue.js"></script>
+        <!-- <script src="resources/app/usgs.services.js"></script> -->
+    </body>
+</html>

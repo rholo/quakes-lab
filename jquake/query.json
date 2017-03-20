@@ -1,0 +1,341 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1481295113000,
+    "url": "http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=-32.784169&longitude=-70.601716&maxradiuskm=450&minmagnitude=4.9&starttime=2016-10-10T14:51:39.366Z",
+    "title": "USGS Earthquakes",
+    "status": 200,
+    "api": "1.5.2",
+    "count": 8
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.2,
+        "place": "70km W of Illapel, Chile",
+        "time": 1481229757000,
+        "updated": 1481240825502,
+        "tz": -300,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us20007zam",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20007zam&format=geojson",
+        "felt": 15,
+        "cdi": 4.6,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 423,
+        "net": "us",
+        "code": "20007zam",
+        "ids": ",us20007zam,",
+        "sources": ",us,",
+        "types": ",dyfi,geoserve,moment-tensor,origin,phase-data,",
+        "nst": null,
+        "dmin": null,
+        "rms": 1.4,
+        "gap": null,
+        "magType": "mwr",
+        "type": "earthquake",
+        "title": "M 5.2 - 70km W of Illapel, Chile"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.91,
+          -31.57,
+          30
+        ]
+      },
+      "id": "us20007zam"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 6.4,
+        "place": "10km SSW of Zonda, Argentina",
+        "time": 1479675463980,
+        "updated": 1480045304433,
+        "tz": -180,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us10007az5",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us10007az5&format=geojson",
+        "felt": 300,
+        "cdi": 6.8,
+        "mmi": 5.52,
+        "alert": "green",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 834,
+        "net": "us",
+        "code": "10007az5",
+        "ids": ",us10007az5,",
+        "sources": ",us,",
+        "types": ",cap,dyfi,geoserve,losspager,moment-tensor,origin,phase-data,shakemap,",
+        "nst": null,
+        "dmin": 0.118,
+        "rms": 1.23,
+        "gap": 63,
+        "magType": "mwp",
+        "type": "earthquake",
+        "title": "M 6.4 - 10km SSW of Zonda, Argentina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.7645,
+          -31.6428,
+          115.79
+        ]
+      },
+      "id": "us10007az5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.1,
+        "place": "45km S of Caucete, Argentina",
+        "time": 1479059573590,
+        "updated": 1479065815760,
+        "tz": -180,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us100077cs",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us100077cs&format=geojson",
+        "felt": 2,
+        "cdi": 2.7,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 401,
+        "net": "us",
+        "code": "100077cs",
+        "ids": ",us100077cs,",
+        "sources": ",us,",
+        "types": ",cap,dyfi,geoserve,origin,phase-data,",
+        "nst": null,
+        "dmin": 0.625,
+        "rms": 1.45,
+        "gap": 48,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 5.1 - 45km S of Caucete, Argentina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.2729,
+          -32.0657,
+          128.98
+        ]
+      },
+      "id": "us100077cs"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 6.4,
+        "place": "25km ESE of Curico, Chile",
+        "time": 1478276443940,
+        "updated": 1480014967198,
+        "tz": -240,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us1000744u",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us1000744u&format=geojson",
+        "felt": 451,
+        "cdi": 7.4,
+        "mmi": 5.22,
+        "alert": "green",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 964,
+        "net": "us",
+        "code": "1000744u",
+        "ids": ",us1000744u,gcmt20161104162043,",
+        "sources": ",us,gcmt,",
+        "types": ",cap,dyfi,geoserve,losspager,moment-tensor,origin,phase-data,shakemap,",
+        "nst": null,
+        "dmin": 0.357,
+        "rms": 1.1,
+        "gap": 60,
+        "magType": "mwp",
+        "type": "earthquake",
+        "title": "M 6.4 - 25km ESE of Curico, Chile"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.9964,
+          -35.1033,
+          90.79
+        ]
+      },
+      "id": "us1000744u"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.9,
+        "place": "90km WSW of San Antonio, Chile",
+        "time": 1477912545950,
+        "updated": 1478958490915,
+        "tz": -300,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us1000738c",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us1000738c&format=geojson",
+        "felt": 5,
+        "cdi": 2.9,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 371,
+        "net": "us",
+        "code": "1000738c",
+        "ids": ",us1000738c,",
+        "sources": ",us,",
+        "types": ",cap,dyfi,geoserve,impact-text,moment-tensor,origin,phase-data,",
+        "nst": null,
+        "dmin": 0.808,
+        "rms": 1.06,
+        "gap": 121,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 4.9 - 90km WSW of San Antonio, Chile"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5757,
+          -33.7609,
+          1.84
+        ]
+      },
+      "id": "us1000738c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.2,
+        "place": "93km WSW of San Antonio, Chile",
+        "time": 1477778499300,
+        "updated": 1481168455040,
+        "tz": -300,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us100072zy",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us100072zy&format=geojson",
+        "felt": 1,
+        "cdi": 2,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 416,
+        "net": "us",
+        "code": "100072zy",
+        "ids": ",us100072zy,",
+        "sources": ",us,",
+        "types": ",cap,dyfi,geoserve,impact-text,moment-tensor,origin,phase-data,",
+        "nst": null,
+        "dmin": 0.83,
+        "rms": 0.9,
+        "gap": 79,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 5.2 - 93km WSW of San Antonio, Chile"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5856,
+          -33.8433,
+          10
+        ]
+      },
+      "id": "us100072zy"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 6,
+        "place": "86km WSW of San Antonio, Chile",
+        "time": 1477600375870,
+        "updated": 1480554209674,
+        "tz": -300,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us100072gn",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us100072gn&format=geojson",
+        "felt": 14,
+        "cdi": 4.3,
+        "mmi": 4.23,
+        "alert": "green",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 560,
+        "net": "us",
+        "code": "100072gn",
+        "ids": ",us100072gn,gcmt20161027203255,",
+        "sources": ",us,gcmt,",
+        "types": ",cap,dyfi,geoserve,impact-text,losspager,moment-tensor,origin,phase-data,shakemap,",
+        "nst": null,
+        "dmin": 0.771,
+        "rms": 1.05,
+        "gap": 78,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 6.0 - 86km WSW of San Antonio, Chile"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5288,
+          -33.7751,
+          13.06
+        ]
+      },
+      "id": "us100072gn"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.9,
+        "place": "33km WSW of Ovalle, Chile",
+        "time": 1476237561930,
+        "updated": 1479694838040,
+        "tz": -240,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/us20007dbk",
+        "detail": "http://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us20007dbk&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 369,
+        "net": "us",
+        "code": "20007dbk",
+        "ids": ",us20007dbk,",
+        "sources": ",us,",
+        "types": ",cap,geoserve,impact-text,moment-tensor,origin,phase-data,",
+        "nst": null,
+        "dmin": 0.092,
+        "rms": 0.9,
+        "gap": 40,
+        "magType": "mwr",
+        "type": "earthquake",
+        "title": "M 4.9 - 33km WSW of Ovalle, Chile"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.53,
+          -30.695,
+          38.44
+        ]
+      },
+      "id": "us20007dbk"
+    }
+  ],
+  "bbox": [
+    -72.5856,
+    -35.1033,
+    1.84,
+    -68.2729,
+    -30.695,
+    128.98
+  ]
+}
