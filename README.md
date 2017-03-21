@@ -8,13 +8,13 @@ Demo con listado de sismos alrededor de una ubicación (geolocalización del dis
 
 ### Initial Params ###
 
-starttime:'dd/mm/yyyy'
-maxlatitude:'-36.739055',
-maxlongitude :'-71.0574942',
-latitude :'-36.739055',
-longitude :'-71.0574942',
-minradiuskm :'0',
-maxradiuskm :'850',
-minmagnitude :4.5,
-eventtype :'earthquake',
-format :'geojson'
+- starttime:'dd/mm/yyyy'
+- maxlatitude:'-36.739055',
+- maxlongitude :'-71.0574942',
+- latitude :'-36.739055',
+- longitude :'-71.0574942',
+- minradiuskm :'0',
+- maxradiuskm :'850',
+- minmagnitude :4.5,
+- eventtype :'earthquake',
+- format :'geojson'
