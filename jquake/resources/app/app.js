@@ -10,7 +10,7 @@ $j = jQuery.noConflict();
 var app = app || {};
 
 app.quakeAPP = {
-    api: 'http://earthquake.usgs.gov',
+    api: 'https://earthquake.usgs.gov',
     //api: 'api',
     load : function () {
         app.quakeAPP.setup();

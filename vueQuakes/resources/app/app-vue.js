@@ -33,7 +33,7 @@ var params = {
     minmagnitude :4.5,
     format :'geojson'
 };
-var url = 'http://earthquake.usgs.gov/fdsnws/event/1/query';
+var url = 'https://earthquake.usgs.gov/fdsnws/event/1/query';
 
   //console.info(realQuakes);
 var quakes = new Vue({
