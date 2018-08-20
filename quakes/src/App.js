@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import QuakeList from 'screen/QuakeList'
+import Quakes from 'screen/Quakes';
 import 'App.css';
-
-//router here!
 
 class App extends Component {
   render() {
@@ -11,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Quakes React</h1>
         </header>
-        <QuakeList />
+        <Quakes />
       </div>
     );
   }
