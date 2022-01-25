@@ -1,5 +1,5 @@
 quakesAPP.factory('preloaderInterceptor',
-    function($q, $rootScope, $log) {
+    function($q, $rootScope) {
         'use strict';
         var currentCalls = 0;
         return {

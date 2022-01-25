@@ -1,20 +1,14 @@
 (function(module) {
     'use strict';
-    quakeListCtrl.$inject = ['$scope','$state', '$log', '$localStorage', '$timeout', '$location', '$sessionStorage', 'usgsService', 'geoLocationService'];
-    function quakeListCtrl(scope, state, log, localStorage, timeout, location, sessionStorage, usgsService, geoLocationService) {
-        if (!localStorage.userPosition) {
-            timeout(function() {
-                log.info('lost!');
-                location.path('/location');
-            });
-            return false;
-        }
+    quakeListCtrl.$inject = ['$scope', '$localStorage', '$timeout', '$location', 'usgsService'];
+    function quakeListCtrl(scope, localStorage, timeout, location, usgsService) {
+        
         var date = new Date();
-        date.setDate(date.getDate() -60); //30 dias atras
+        date.setDate(date.getDate() -60);
         var userConfig = {
             maxRadius:'450',
-            mag:4.9,
-            date: date
+            mag:4.5,
+            date 
         };
         scope.userLocation = localStorage.userPosition;
 
@@ -35,8 +29,7 @@
                         //eventtype     :'earthquake',
                         format          :'geojson'
                     })
-                    .success(function(data, status) {
-                        log.info(status, data);
+                    .success(function(data, _status) {
                         if (angular.equals(localStorage.quakeList,data.features)) {
                             scope.quakeList = localStorage.quakeList;
                             console.info('from localStorage');
@@ -49,8 +42,8 @@
                             localStorage.quakeList = data.features;
                         }
 
-                    }).error(function(data, status) {
-                        log.error(status);
+                    }).error(function(_data, status) {
+                        throw new Error(status);
                     });
             };
             scope.getQuakes();
@@ -60,7 +53,6 @@
         scope.reloadCity = function () {
             delete localStorage.userPosition;
             timeout(function() {
-                log.info('reloadCity');
                 location.path('/location');
             });
         };

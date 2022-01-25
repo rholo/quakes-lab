@@ -1,45 +1,37 @@
 (function(module) {
     'use strict';
-    locationCtrl.$inject = ['$scope', '$log', '$location', '$timeout', '$localStorage', '$sessionStorage', 'geoLocationService'];
+    locationCtrl.$inject = ['$scope', '$location', '$timeout', '$localStorage', 'geoLocationService'];
 
-    function locationCtrl(scope, log, location, timeout, localStorage, sessionStorage, geoLocationService) {
-
-        log.info('latitud/longitud: ',localStorage.userPosition);
+    function locationCtrl(scope, location, timeout, localStorage, geoLocationService) {
 
         scope.redirect = function () {
             timeout(function() {
-                log.info('located!');
                 location.path('/quake-list');
             });
         };
 
         if (!localStorage.userPosition) {
-            (geoLocationService.newPosition(function(pos) {
+            (geoLocationService.newPosition(function(_position) {
 
                 var userPosition = {
-                    lat: '-32.784169',
-                    lng: '-70.601716',
-                    city:''
+                    lat: '-32.8337995',
+                    lng: '-70.5972179',
+                    city:'Los Andes'
                 };
                 localStorage.userPosition = userPosition;
 
                 var positioned = [localStorage.userPosition.lat,localStorage.userPosition.lng];
 
-                (scope.getCity = function() {
                     geoLocationService.getCity({
                            latlng: positioned.toString(positioned),
                            sensor: 'true'
                         })
-                        .success(function(data, status) {
-                            localStorage.userPosition.city = data.results[0].address_components[3].short_name;
-
-                            log.info('Ciudad: ', localStorage.userPosition.city);
-
+                        .success(function(data) {
+                            localStorage.userPosition.city = 'Los Andes'
                         })
-                        .error(function(data, status) {
-                           log.error(status);
+                        .error(function(status) {
+                            throw new Error(status)
                         });
-                })();
                     scope.redirect();
             }));
         } else {
