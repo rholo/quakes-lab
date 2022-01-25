@@ -1,6 +1,6 @@
 /**
  * @version 0.2.0
- * @author Rodrigo Ahumada - Front-end at Nectia | hola@rholo.cl
+ * @author Rodrigo Ahumada - Front-end | hola@rholo.cl
  * @description Framework to make some useful functions more easily work with params to Front-end
  * @param $j
  **/
@@ -11,7 +11,6 @@ var app = app || {};
 
 app.quakeAPP = {
     api: 'https://earthquake.usgs.gov',
-    //api: 'api',
     load : function () {
         app.quakeAPP.setup();
     },
