@@ -1,6 +1,6 @@
-var quakesAPP = angular.module('quakesAPP', ['ui.router','ngAnimate','ngStorage']);
+const quakesAPP = angular.module('quakesAPP', ['ui.router', 'ngAnimate']);
 
-(function(quakesAPP){
+(function (quakesAPP) {
     quakesAPP.config(['$stateProvider', '$urlRouterProvider',
         function ($stateProvider, $urlRouterProvider) {
 
@@ -8,24 +8,21 @@ var quakesAPP = angular.module('quakesAPP', ['ui.router','ngAnimate','ngStorage'
 
             $stateProvider
                 .state('location', {
-                    url         :'/location',
-                    templateUrl :'resources/app/partials/user-location-tmpl.html',
-                    controller  :'locationCtrl'
-                })
-                .state('custom', {
-                    url         :'/custom-search',
-                    templateUrl :'resources/app/partials/custom-config-tmpl.html',
-                    controller  :'customCtrl'
+                    url: '/location',
+                    templateUrl: 'resources/app/partials/user-location-tmpl.html',
+                    controller: 'locationCtrl',
+                    controllerAs: 'vm',
                 })
                 .state('quakeList', {
-                    url         :'/quake-list',
-                    templateUrl :'resources/app/partials/quake-list-tmpl.html',
-                    controller  :'quakeListCtrl'
+                    url: '/quake-list',
+                    templateUrl: 'resources/app/partials/quake-list-tmpl.html',
+                    controller: 'quakeListCtrl',
+                    controllerAs: 'vm'
                 })
-                .state('quakeDetails',{
-                    url         :'/quake-details/:id',
-                    templateUrl :'resources/app/partials/quake-details-tmpl.html',
-                    controller  :'quakeDetailsCtrl'
+                .state('quakeDetails', {
+                    url: '/quake-details/:id',
+                    templateUrl: 'resources/app/partials/quake-details-tmpl.html',
+                    controller: 'quakeDetailsCtrl'
                 });
         }]);
 })(quakesAPP);

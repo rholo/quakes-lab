@@ -1,43 +1,44 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8"/>
-<!-- Internet Explorer compatibility mode -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- <link rel="shortcut icon" href="favicon.ico"> -->
-<title>Earthquakes</title>
-<!-- for Google -->
-<meta name="description" content="Información de sismos basados en la escala de Richter" />
-<meta name="author" content="Rodrigo Ahumada" />
-<meta name="copyright" content="Rodrigo Ahumada" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
-<!--Google me at Github-->
-<link rel="stylesheet" media="all" href="resources/css/reset.css"/>
-<link rel="stylesheet" media="all" href="resources/css/main.css"/>
-<link rel="stylesheet" media="all" href="resources/css/base64.css"/>
-<link rel="stylesheet" media="all" href="resources/css/animate.css"/>
-<!--Jquery-->
-<script src="resources/js/jquery/jquery.min.js"></script>
-<!--AngularJS-->
-<script src="resources/js/angular/angular.min.js"></script>
-<script src="resources/js/angular/angular-ui-router.min.js"></script>
-<script src="resources/js/angular/angular-animate.min.js"></script>
-<script src="resources/js/angular/ngStorage.min.js"></script>
+    <meta charset="utf-8" />
+    <!-- Internet Explorer compatibility mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+    <title>Earthquakes</title>
+    <!-- for Google -->
+    <meta name="description" content="Información de sismos basados en escala Richter" />
+    <meta name="author" content="Rodrigo Ahumada" />
+    <meta name="copyright" content="Rodrigo Ahumada" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+    <!--Google me at Github-->
+    <link rel="stylesheet" media="all" href="resources/css/reset.css" />
+    <link rel="stylesheet" media="all" href="resources/css/main.css" />
+    <link rel="stylesheet" media="all" href="resources/css/base64.css" />
+    <link rel="stylesheet" media="all" href="resources/css/animate.css" />
+
+    <!--AngularJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js"></script>
 </head>
+
 <body ng-app="quakesAPP">
     <main>
         <section ui-view>
         </section>
     </main>
-<div preloader ng-show="preloaderVisible"></div>
-<!-- App -->
-<script src="resources/app/app.js"></script>
-<script src="resources/app/services/preloader.service.js"></script>
-<script src="resources/app/services/geolocation.service.js"></script>
-<script src="resources/app/services/usgs.service.js"></script>
-<script src="resources/app/services/user.service.js"></script>
-<script src="resources/app/controllers/userLocation.controller.js"></script>
-<script src="resources/app/controllers/quakeList.controller.js"></script>
-<script src="resources/app/controllers/quakeDetails.controller.js"></script>
+    <div preloader ng-show="preloaderVisible"></div>
+    <!-- App -->
+    <script src="resources/app/app.js"></script>
+    <script src="resources/app/services/preloader.service.js"></script>
+    <script src="resources/app/services/geolocation.service.js"></script>
+    <script src="resources/app/services/usgs.service.js"></script>
+    <script src="resources/app/controllers/userLocation.controller.js"></script>
+    <script src="resources/app/controllers/quakeList.controller.js"></script>
+    <script src="resources/app/controllers/quakeDetails.controller.js"></script>
 </body>
+
 </html>

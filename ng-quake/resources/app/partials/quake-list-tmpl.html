@@ -1,35 +1,42 @@
 <header>
-    <h1>Equakes</h1>
+    <h1>Sismos</h1>
 </header>
 <aside search>
-    <input type="search" autofocus="true" ng-model="event" value="" placeholder="Buscar o Filtrar" ui="input-text" class="input-search">
+    <input type="search" autofocus="true" ng-model="event" value="" placeholder="Buscar o Filtrar" ui="input-text"
+        class="input-search">
 </aside>
-<span class="results"><b>{{quakeList.length}}</b> Sismos perceptibles cercanos a <b>{{userLocation.city}}</b> <a href="javascript:;" ng-click="reloadCity()">Recargar</a></span>
+<span class="results">
+    <b>{{quakeList.length}}</b>
+    Sismos perceptibles cercanos a <b>{{ city }}</b>
+    <a href="javascript:;" ng-click="reloadCity()">Recargar</a>
+</span>
 <ul class="events">
-    <li class="animate-show" ng-show="(quakeList | filter:event).length == 0" ng-hide="quakeList.length" class="animate-show">
+    <li class="animate-show" ng-show="(quakeList | filter:event).length == 0" ng-hide="quakeList.length">
         <span class="place">Sin Resultados</span>
     </li>
-<li class="animate-repeat"
-	ng-repeat="quake in quakeList | filter:event"
-	ng-class="quake.properties.mag > 5.9 ? 'red-background-list':(quake.properties.mag > 4.9 ? 'yellow-background-list':'default-background-list')">
+    <li class="animate-repeat" ng-repeat="quake in quakeList | filter:event"
+        ng-class="quake.properties.mag > 5.9 ? 'red-background-list':(quake.properties.mag > 4.9 ? 'yellow-background-list':'default-background-list')">
         <a ui-sref="quakeDetails({id:quake.id})">
-            <div color ng-class="quake.properties.mag > 5.9 ? 'red-background':(quake.properties.mag > 4.9 ? 'yellow-background':'')"></div>
-            <span class="mag" ng-class="quake.properties.mag > 5.9 ? 'red-mag':(quake.properties.mag > 4.9 ? 'yellow-mag':'')">{{quake.properties.mag}}</span>
+            <div color
+                ng-class="quake.properties.mag > 5.9 ? 'red-background':(quake.properties.mag > 4.9 ? 'yellow-background':'')">
+            </div>
+            <span class="mag"
+                ng-class="quake.properties.mag > 5.9 ? 'red-mag':(quake.properties.mag > 4.9 ? 'yellow-mag':'')">{{quake.properties.mag}}</span>
             <span class="place">{{quake.properties.place}}</span>
-                <ul class="quake-info">
-                    <li>
-                        <i size="16" ico="calendar"></i>
-                        <span>{{quake.properties.time | date:"dd/MM/yyyy"}}</span>
-                    </li>
-                    <li>
-                        <i size="16" ico="clock"></i>
-                        <span >{{quake.properties.time | date:"h:mma"}}</span>
-                    </li>
-                    <li>
-                        <i size="16" ico="red-alert" ng-if="quake.properties.tsunami !== 0"></i>
-                        <span ng-if="quake.properties.tsunami !== 0">Alertas Declaradas</span>
-                    </li>
-                </ul>
+            <ul class="quake-info">
+                <li>
+                    <i size="16" ico="calendar"></i>
+                    <span>{{quake.properties.time | date:"dd/MM/yyyy"}}</span>
+                </li>
+                <li>
+                    <i size="16" ico="clock"></i>
+                    <span>{{quake.properties.time | date:"h:mma"}}</span>
+                </li>
+                <li ng-if="quake.properties.tsunami !== 0">
+                    <i size="16" ico="red-alert"></i>
+                    <span>Alertas Declaradas</span>
+                </li>
+            </ul>
         </a>
     </li>
 </ul>
