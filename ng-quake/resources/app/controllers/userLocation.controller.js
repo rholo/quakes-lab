@@ -4,10 +4,10 @@
         '$scope',
         '$location',
         '$timeout',
-        'geoLocationService'
+        'LocationService'
     ];
 
-    function locationCtrl(scope, location, timeout, geoLocationService) {
+    function locationCtrl(scope, location, timeout, LocationService) {
         const vm = this;
         vm.$onInit = () => {
             console.log(vm);
@@ -23,16 +23,16 @@
             location.path('/quake-list');
         }
         vm.getBrowserPosition = () => {
-            geoLocationService.newPosition(({ lat, lng }) => {
+            LocationService.newPosition(({ lat, lng }) => {
 
                 let positioned = [lat, lng];
 
-                geoLocationService.getCity({
+                LocationService.getCity({
                     latlng: positioned.toString(positioned),
                     sensor: 'true'
                 })
                     .success(function (data) {
-                        geoLocationService.currentPosition.city = 'Los Andes'
+                        LocationService.currentPosition.city = 'Los Andes'
                     })
                     .error(function (status) {
                         throw new Error(status)

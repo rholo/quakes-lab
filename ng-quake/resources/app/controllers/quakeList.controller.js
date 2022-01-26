@@ -4,15 +4,15 @@
         '$scope',
         '$timeout',
         '$location',
-        'usgsService',
-        'geoLocationService'
+        'UsgsService',
+        'LocationService'
     ];
     function quakeListCtrl(
         scope,
         timeout,
         location,
-        usgsService,
-        geoLocationService) {
+        UsgsService,
+        LocationService) {
         const vm = this;
         vm.$onInit = function () {
             console.log(vm)
@@ -25,16 +25,16 @@
             mag: 4.2,
             date
         };
-        scope.city = geoLocationService.currentPosition.city;
+        scope.city = LocationService.currentPosition.city;
 
         vm.getQuakes = function () {
-            usgsService.getQuakes({
+            UsgsService.getQuakes({
                 //callback      :'JSON_CALLBACK',
                 starttime: userConfig.date,
                 //maxlatitude   :'-36.739055',
                 //maxlongitude  :'-71.0574942',
-                latitude: geoLocationService.currentPosition.lat,
-                longitude: geoLocationService.currentPosition.lng,
+                latitude: LocationService.currentPosition.lat,
+                longitude: LocationService.currentPosition.lng,
                 //minradiuskm   :'0',
                 maxradiuskm: userConfig.maxRadius,
                 minmagnitude: userConfig.mag,
