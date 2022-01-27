@@ -15,20 +15,12 @@
     </head>
     <body>
         <main class="nt_content" id="app">
-            <article >
-                <ul  class="events" v-if="ready">
-                    <li v-for="event in events" v-bind:class="[{red: event.properties.mag >= 5},{yellow: event.properties.mag <= 4.9}]">
-                        <a href="javascript:;" v-on:click="getDetails(event.id)">
-                            <div class="block-color" v-bind:class="[{red: event.properties.mag >= 5},{yellow: event.properties.mag <= 4.9}]"></div>
-                            <span class="mag"><i class="fa fa-place"></i>{{event.properties.mag}}</span>
-                            <span class="place"><i class="fa fa-bullseye"></i>{{event.properties.place}}</span>
-                            <span class=""><i class="fa fa-clock"></i>Fecha: {{event.properties.time | formatDate}}, Hora: {{event.properties.time | formatTime}}</span>
-                            <span class="" v-if="event.properties.tsunami != 0"><strong>Declarada Alerta de Tsunami</strong></span>
-                        </a>
-                    </li>
-                </ul>
+            <article v-if="ready">
+                <quakes-list></quakes-list>
             </article>
         </main>
+        <script src="components/QuakesList.js"></script>
+        <script src="components/QuakeEvent.js"></script>
         <script src="store.js"></script>
         <script src="app.js"></script>
     </body>

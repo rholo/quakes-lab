@@ -22,7 +22,12 @@ const getState = () => ({
 const store = new Vuex.Store({
   state: getState(),
   getters: {
-    quakes: state => state.quakes,
+    quakes: state => state.quakes.filter(event => event.properties.place.includes('Chile')),
+    filteredEvent: (_state, getters) => filter => getters.quakes.filter(({properties}) => {
+      const newFind = filter.toLowerCase();
+      const titleLowercase = properties.title.toLowerCase()
+      return titleLowercase.includes(newFind)
+    })
   },
   mutations: {
     SET_FEATURES(state, payload){

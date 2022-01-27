@@ -1,17 +1,18 @@
 const app = new Vue({
   store,
   el: '#app',
-  data() {
-    return {
-      events:[]
-    }
+  data: {
+    events:[],
+    ready: false
   },
   created() {
     this.getQuakes().then(features => {
-      this.events = features 
+      if (features.length > 0) { 
+        this.ready = true;
+      }
     });
   },
   methods:{
-    ...Vuex.mapActions(['getQuakes', 'ready'])
+    ...Vuex.mapActions(['getQuakes'])
   }
 })
