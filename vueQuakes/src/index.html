@@ -7,19 +7,16 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> -->
         <title>VueQuakes</title>
-        <link rel="stylesheet" media="all" href="resources/css/reset.css">
-        <link rel="stylesheet" media="all" href="resources/css/nt_layout.css">
-        <link rel="stylesheet" media="all" href="resources/css/custom-layout.css">
-        <script src="//use.fontawesome.com/c3d275c793.js"></script>
+        <link rel="stylesheet" media="all" href="./css/reset.css">
+        <link rel="stylesheet" media="all" href="./css/nt_layout.css">
+        <link rel="stylesheet" media="all" href="./css/custom-layout.css">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js"></script>
-        <script src="resources/js/vue-filter.js"></script>
-        <script src="//cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
     </head>
     <body>
-        <main class="nt_content">
-            <article id="earthquakesList">
-                <ul  class="events">
+        <main class="nt_content" id="app">
+            <article >
+                <ul  class="events" v-if="ready">
                     <li v-for="event in events" v-bind:class="[{red: event.properties.mag >= 5},{yellow: event.properties.mag <= 4.9}]">
                         <a href="javascript:;" v-on:click="getDetails(event.id)">
                             <div class="block-color" v-bind:class="[{red: event.properties.mag >= 5},{yellow: event.properties.mag <= 4.9}]"></div>
@@ -29,14 +26,10 @@
                             <span class="" v-if="event.properties.tsunami != 0"><strong>Declarada Alerta de Tsunami</strong></span>
                         </a>
                     </li>
-                    <!-- <quake-list v-for="event in events" v-bind:events="event"></quake-list> -->
                 </ul>
-                <!-- <div :is="detail"></div> -->
-                <quake-detail></quake-detail>
             </article>
         </main>
-        <footer></footer>
-        <script src="resources/app/app-vue.js"></script>
-        <!-- <script src="resources/app/usgs.services.js"></script> -->
+        <script src="store.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>

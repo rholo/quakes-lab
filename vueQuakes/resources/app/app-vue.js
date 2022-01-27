@@ -1,3 +1,15 @@
+Vue.component('QuakeList', {
+    props:{
+        event:{
+            type: Object,
+            required: true
+        }
+    },
+    template:`<li>
+        {{ event.properties.mag }}
+    </li>`
+});
+
 Vue.component('quake-list',{
     props:['events'],
     template:'<li :class="[{red: events.properties.mag >= 5},{yellow: events.properties.mag <= 4.9}]">\
@@ -38,7 +50,7 @@ var url = 'https://earthquake.usgs.gov/fdsnws/event/1/query';
   //console.info(realQuakes);
 var quakes = new Vue({
     el:'#earthquakesList',
-    created:function(){
+    created() {
         this.getQuakes();
     },
     filters:{
@@ -98,16 +110,4 @@ var quakes = new Vue({
         }
     }
 });
-Vue.component('title-quake',{
-    props:['titulo'],
-    template:'<h1>{{titulo}}</h1>'
-})
-var title = new Vue({
-    el:'#header',
-    data:function() {
-        return {
-            mensaje:'VueQuakes'
-        }
-    }
 
-});
